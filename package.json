@@ -18,6 +18,11 @@
   "bugs": {
     "url": "https://github.com/Svetlana-Gubina/ui-kit/issues"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "homepage": "https://github.com/Svetlana-Gubina/ui-kit#readme",
   "devDependencies": {
     "pug": "^2.0.4",
