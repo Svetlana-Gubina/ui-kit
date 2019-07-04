@@ -1,0 +1,26 @@
+{
+  "name": "UI-KIT",
+  "version": "1.0.0",
+  "description": "Макет страниц по поиску номеров в отеле (FSD, практическое задание - верстка)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svetlana-Gubina/ui-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Svetlana-Gubina/ui-kit/issues"
+  },
+  "homepage": "https://github.com/Svetlana-Gubina/ui-kit#readme",
+  "devDependencies": {
+    "pug": "^2.0.4",
+    "sass": "^1.22.3"
+  }
+}
