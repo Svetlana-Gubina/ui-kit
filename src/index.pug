@@ -6,5 +6,124 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
     body
+    //- Searching rooms
+    //
+    h2  Найдём номера под ваши пожелания
+    form.search-form(method='GET' action='#')
+          div.search-form__group
+            label(for='start') Прибыите
+            input#start.search-form__control(type='date' name='arrive')
+          div.search-form__group
+            label(for='end') Выезд
+            input#end.search-form__control(type='date' name='depart')
+          div.search-form__group
+            label(for='guests') Гости
+            select#guests.search-form__control(name="guests" placeholder="Сколько гостей")
+               option 1
+               option 2
+               option 3
+          button.btn.btn--search(type='submit') Подобрать номер
+    //- Register
+    //
+    h2  Регистрация аккаунта
+    form.register-form(method='POST' action='#')
+        div.register-form__group
+           label(for='name') Имя
+           input#name.register-form__control(type='text', placeholder='Имя' name='name')
+        div.register-form__group
+           label(for='surname') Фамилия
+           input#surname.register-form__control(type='text', placeholder='Фамилия' name='surname')
+        div.register-form__group
+           input#male.register-form__checkbox(type='radio' name='sex' value='male' checked)
+           label(for='male') Мужчина
+           input#female.register-form__checkbox(type='radio' name='sex' value='female')
+           label(for='female') Женщина
+        div.register-form__group
+           label(for='birthday') Дата рождения
+           input#birthday.register-form__control(type='date' name='birthday')
+        p  Данные для входа в сервис 
+        div.login-form__group
+            label(for='email') Email:
+            input#email.login-form__control(type='email' placeholder='Email' name='email' required)
+        div.login-form__group
+            label(for='pw') Password:
+            input#pw.login-form__control(type='password' placeholder='Пароль' name='password' required)
+        div.register-form__group    
+            input#switch.register-form__checkbox.register-form__checkbox--switch(type='checkbox' name='switch' checked)
+            label(for='switch') Получать спецпредложения
+                span.switch-slider.switch-slider-on
+                span.switch-slider.switch-slider-off
+        button.btn.btn--register(type='submit') Перейти к оплате    
+        div.login-form__footer
+            - var authorised = true
+            if authorised
+               p.login-form__text  Уже есть аккаунт на Toxin?
+               button.btn-tr.btn-tr--login(type='submit') Войти
+            else   
+               p.login-form__text Нет аккаунта на Toxin?
+               button.btn-tr.btn-tr--create(type='submit') Создать        
+    //- Login form
+    //
+    h2 Войти
+    form.login-form(method='POST' action='#')
+          div.login-form__group
+            label(for='email') Email:
+            input#email.login-form__control(type='email' placeholder='Email' name='email' required)
+          div.login-form__group
+            label(for='pw') Password:
+            input#pw.login-form__control(type='password' placeholder='Пароль' name='password' required)
+          button.btn.btn--login(type='submit') Войти
+          div.login-form__footer
+            - var authorised = false
+            if authorised
+               p.login-form__text  Уже есть аккаунт на Toxin?
+               button.btn-tr.btn-tr--login(type='submit') Войти
+            else   
+               p.login-form__text Нет аккаунта на Toxin?
+               button.btn-tr.btn-tr--create(type='submit') Создать
+
+    //- Calendar
+    //
+    //- Booking form
+    p.room__number № 888 
+      span.room__class люкс 
+    p.room__price 9 990₽  
+      span.room__price-span в сутки
+    form.booking-form(method='POST' action='#')
+     div.search-form__group
+            label(for='start') Прибыите
+            input#start.search-form__control(type='date' name='arrive')
+     div.search-form__group
+            label(for='end') Выезд
+            input#end.search-form__control(type='date' name='depart') 
+     div.search-form__group
+            label(for='guests') Гости
+            select#guests.search-form__control(name="guests" placeholder="Сколько гостей")
+                option 1
+                option 2
+                option 3
+        div.search-form__table
+            table.booking-form__count
+              tr
+                  td 9 990₽ х 4 суток 
+                  td 39 960₽ 
+              tr
+                  td 9 990₽ х 4 суток 
+                  td 39 960₽ 
+              tr
+                  td  Сбор за услуги: скидка 2 179₽ 
+                  td  0₽
+              tr
+                  td Сбор за дополнительные услуги
+                  td 300₽ 
+              tr
+            td.booking-form__count-total  Итого  
+            td.booking-form__count-total  38 081₽
+        
+      
+        button.btn.btn--book(type='submit') Забронировать
+    //
+    //- Room
+    //
         h1 Hello Parcel!
         script(src='./main.js')
