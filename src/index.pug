@@ -85,10 +85,11 @@ html(lang="en")
     //- Calendar
     //
     //- Booking form
-    p.room__number № 888 
-      span.room__class люкс 
-    p.room__price 9 990₽  
-      span.room__price-span в сутки
+    div.room__cost
+      p.room__number № 888 
+        span.room__class люкс 
+      p.room__price 9 990₽  
+        span.room__price-span в сутки
     form.booking-form(method='POST' action='#')
      div.search-form__group
             label(for='start') Прибыите
@@ -102,7 +103,7 @@ html(lang="en")
                 option 1
                 option 2
                 option 3
-        div.search-form__table
+    div.search-form__table
             table.booking-form__count
               tr
                   td 9 990₽ х 4 суток 
@@ -121,9 +122,136 @@ html(lang="en")
             td.booking-form__count-total  38 081₽
         
       
-        button.btn.btn--book(type='submit') Забронировать
+    button.btn.btn--book(type='submit') Забронировать
     //
-    //- Room
+    //- Room-1
+    div.room__slider
+      img.room__foto(src="#" width="332" height="189" alt="Фото номера")
+      div.room__slider-toogler
+        //-input.room__slider-toogle(type="radio" name="toggle" value="1" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="2" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="3" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="4" checked)
+        div.room__slider-toogle
+        div.room__slider-toogle
+        div.room__slider-toogle
+        div.room__slider-toogle
+    div.room__cost
+        p.room__number № 888 
+        span.room__class люкс 
+        p.room__price 9 990₽  
+        span.room__price-span в сутки    
+    div.room__rating
+        div.room__stars 
+        div.room__reviews 145 Отзывов
     //
-        h1 Hello Parcel!
+    //- Room-2
+    div.room__slider
+      img.room__foto(src="#" width="332" height="189" alt="Фото номера")
+      div.room__slider-toogler
+        //-input.room__slider-toogle(type="radio" name="toggle" value="1" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="2" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="3" checked)
+        //-input.room__slider-toogle(type="radio" name="toggle" value="4" checked)
+        div.room__slider-toogle
+        div.room__slider-toogle
+        div.room__slider-toogle
+        div.room__slider-toogle
+    div.room__cost
+        p.room__number  № 840
+        //-span.room__class
+        p.room__price  9 900₽ в сутки
+        span.room__price-span в сутки    
+    div.room__rating
+        div.room__stars
+        div.room__reviews 65 Отзывов
+    //- FOOTER-sm
+    div.footer
+        div.logo
+          a(href='/' + url) Токсин  
+        p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        div.social-icons
+          ul.social-icons__list
+            li 
+              a(href='/' + url) Twitter
+            li 
+              a(href='/' + url) Facebook
+            li 
+              a(href='/' + url) Instagram  
+    //-FOOTER-lg
+    div.page-footer        
+        div.logo
+          a(href='/' + url) Токсин
+        p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        div.page-footer__subscribe
+          h3.page-footer__-heading Subscribe to our newsletter
+          p.footer__text Receive our latest news and promotions in your inbox!
+          form.page-footer__subscribe-form(method="POST" action="#")
+            label(for="subscribe") Hidden
+            input#subscribe.page-footer__subscribe-input(type="email" name="email" placeholder="Your email address")
+            //-submit??button inside input?
+          div.page-footer__bottom
+            p.copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+            div.social-icons
+              ul.social-icons__list
+                li 
+                  a(href='/' + url) Twitter
+                li 
+                  a(href='/' + url) Facebook
+                li 
+                  a(href='/' + url) Instagram
+    //-HEADER
+    header.page-header
+        div.logo
+          a(href='/' + url) Токсин  
+        nav.page-header__nav
+          ul.page-header__nav-list
+              li.page-header__nav-item 
+                a.page-header__nav-link.active(href='/' + url) Home
+              li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) About-us
+              li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Services
+              li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Careers
+              li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) News
+              li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Documentaion
+        div.user-nav
+          - var authorised = false
+          if authorised
+            p.user-nav__name Cosmin Negoita 
+          else 
+            a.user-nav-link(href='/' + url) Login
+            a.user-nav-link(href='/' + url) Register  
+    //-HEADER-loged-in
+    header.page-header
+        div.logo
+        a(href='/' + url) Токсин  
+        nav.page-header__nav
+          ul.page-header__nav-list
+            li.page-header__nav-item 
+                a.page-header__nav-link.active(href='/' + url) Home
+            li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) About-us
+            li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Services
+            li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Careers
+            li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) News
+            li.page-header__nav-item
+                a.page-header__nav-link(href='/' + url) Documentaion
+        div.user-nav
+          - var authorised = true
+          if authorised
+            p.user-nav__name Cosmin Negoita 
+          else 
+            a.user-nav-link(href='/' + url) Login
+            a.user-nav-link(href='/' + url) Register
+
+    //-h1 Hello Parcel!
         script(src='./main.js')
+
+        
